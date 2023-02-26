@@ -1,15 +1,13 @@
 #pragma GCC push_options
 float pairwise_sum_simd(float* x, int n) {
-    while (n > 1) {
-#pragma omp simd
-        for (int i = 0; i < n / 2; i++) {
-            x[i] = x[2 * i] + x[2 * i + 1];
-        }
-        if (n % 2 == 1) {
-            x[n / 2] = x[n - 1];
-        }
-        n = (n + 1) / 2;
+    if (n == 1) {
+        return x[0];
     }
-    return x[0];
+#pragma omp simd
+    int shift = (n + 1) / 2;
+    for (int i = 0; i < n / 2; i++) {
+        x[i] += x[i + shift];
+    }
+    return pairwise_sum_simd(x, shift);
 }
 #pragma GCC pop_options

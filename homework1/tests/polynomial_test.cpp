@@ -26,9 +26,9 @@ void test_polynomial_zero_deg() {
 }
 
 void test_polynomial() {
-    std::cout << "\nTest polynomial started" << std::endl;
+    std::cout << "\n=== Test polynomial started ===" << std::endl;
     test_polynomial_1();
     test_polynomial_2();
     test_polynomial_zero_deg();
-    std::cout << "Test polynomial completed successfully\n" << std::endl;
+    std::cout << "=== Test polynomial completed successfully ===\n" << std::endl;
 }

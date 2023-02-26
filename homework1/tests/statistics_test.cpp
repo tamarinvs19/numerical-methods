@@ -4,7 +4,7 @@
 #include "../tasks.h"
 
 void test_statistics() {
-    std::cout << "Start statistics test" << std::endl;
+    std::cout << "\n=== Start statistics test ===" << std::endl;
     Statistics statistics;
 
     std::vector<float> values = {10, 20, 30, 40};
@@ -18,5 +18,5 @@ void test_statistics() {
     assert(statistics.sum() == 100.f);
     assert(statistics.mean() == 25.f);
     assert(statistics.variance() == 125.f);
-    std::cout << "Start statistics completed successfully" << std::endl;
+    std::cout << "=== Start statistics completed successfully ===\n" << std::endl;
 }

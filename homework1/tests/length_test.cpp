@@ -5,10 +5,10 @@
 # include "../tasks.h"
 
 void test_length() {
-    std::cout << "\nLength test stated" << std::endl;
+    std::cout << "\n=== Length test stated ===" << std::endl;
     int n = 10000000;
     float elem = 10000000.f/std::sqrt(2.f);
     std::vector<float> vec(n, elem);
     assert(length(vec.data(), n) == 10000000.f);
-    std::cout << "Length test completed successfully\n" << std::endl;
+    std::cout << "=== Length test completed successfully ===\n" << std::endl;
 }

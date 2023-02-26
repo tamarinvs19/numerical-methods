@@ -12,7 +12,7 @@ float simple_sum(const float* x, int n) {
 }
 
 void test_kahan_sum() {
-    std::cout << "Kahan test stated" << std::endl;
+    std::cout << "\n=== Kahan test stated ===" << std::endl;
     int n = 9000000;
     float elem = 1.0 / 9.0;
     std::vector<float> x(n, elem);
@@ -27,7 +27,7 @@ void test_kahan_sum() {
     std::cout << std::setprecision(60) << "Kahan result: " << kahan_sum_answer << " (delta = " << diff_kahan << ")" << std::endl;
     std::cout << std::setprecision(60) << "Simple result: " << simple_sum_answer << " (delta = " << diff_simple << ")" << std::endl;
 
-    std::cout << "Kahan test completed" << std::endl;
+    std::cout << "=== Kahan test completed ===\n" << std::endl;
 
     std::ios_base::fmtflags f( std::cout.flags() );
     std::cout.flags(f);
